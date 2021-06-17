@@ -6,17 +6,11 @@ public class CalculadorPorcentaje extends Calculador{
 
     int porcentaje;
 
-    public CalculadorPorcentaje(Filtro filtro, int porcentaje) {
-        super(filtro);
+    public CalculadorPorcentaje( int porcentaje) {
         this.porcentaje = porcentaje;
     }
 
-    @Override
-    public double calcularMonto () {
-        double retorno = 0;
-        if (filtro.cumple()) {
-            retorno += (comida.getPrecio() * porcentaje/100);
-        }
-        return retorno;
+    public double calcularMonto (Comida comida) {
+        return (comida.getPrecio() * porcentaje/100);
     }
 }

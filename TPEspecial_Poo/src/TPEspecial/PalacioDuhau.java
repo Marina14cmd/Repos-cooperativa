@@ -10,15 +10,23 @@ public class PalacioDuhau {
         Cocina cocina = new Cocina();
 
         Filtro lacteo= new FiltroTipo("lacteo");
-        Filtro calorias = new FiltroCaloriasMenor(250);
+        Filtro calorias = new FiltroCaloriasMayor(500);
         Filtro menorCincuenta= new FiltroTiempoMenor(50);
         Filtro menorQuince= new FiltroTiempoMenor(15);
         Filtro alHorno= new FiltroPreparacion("al horno");
+        Filtro timeAndHorno = new FiltroAnd(alHorno,menorQuince);
         Filtro ensalada= new FiltroTipo("ensalada");
+        Filtro notEnsalada= new FiltroNot(ensalada);
         Filtro salado= new FiltroTipo("salado");
+        Filtro notTimeAndHorno = new FiltroNot(timeAndHorno);
         Filtro timeAndCalorias = new FiltroAnd(calorias,menorCincuenta);
 
-        Calculador miercoles = new CalculadorPorcentaje(55);
+        Calculador miercoles = new CalculadorPorcentaje(-20);
+        Calculador tiempoAlHorno = new CalculadorPrecioFijo(50,130,timeAndHorno);
+        Calculador criterioEnsalada = new CalculadorPrecioFijo(10,50,ensalada);
+        Calculador caloriasQuinientos = new CalculadorPrecioFijo(100,0,calorias);
+        Calculador propina = new CalculadorPorcentaje(55);
+
         cocina.setCalculador(miercoles);
 
         EstacionTrabajo lacteos = new EstacionTrabajo("Lacteos",lacteo);
@@ -48,7 +56,6 @@ public class PalacioDuhau {
         primero.agregarAPedido(lasagna);
         primero.agregarAPedido(alfajor);
 
-        cocina.precioPedido()
 
         System.out.println(primero.toString());
 

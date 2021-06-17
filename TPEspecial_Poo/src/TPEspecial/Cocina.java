@@ -60,7 +60,7 @@ public class Cocina {
         double retorno = 0;
         retorno += pedido.devolverCosto();
         for (int i =0;i <pedido.devolverComidas().size();i++) {
-            retorno += calculador.calcularMonto(pedido.devolverComidas().get(i),filtro);
+            retorno += calculador.calcularMonto(pedido.devolverComidas().get(i));
         }
         return retorno;
     }
