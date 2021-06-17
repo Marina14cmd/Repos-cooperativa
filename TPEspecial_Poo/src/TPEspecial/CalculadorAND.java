@@ -1,7 +1,5 @@
 package TPEspecial;
 
-import TPEspecial.filtros.Filtro;
-
 public class CalculadorAND extends Calculador{
 
     Calculador c1;

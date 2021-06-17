@@ -1,7 +1,5 @@
 package TPEspecial;
 
-import TPEspecial.filtros.Filtro;
-
 public class CalculadorPorcentaje extends Calculador{
 
     int porcentaje;
@@ -10,6 +8,7 @@ public class CalculadorPorcentaje extends Calculador{
         this.porcentaje = porcentaje;
     }
 
+    @Override
     public double calcularMonto (Comida comida) {
         return (comida.getPrecio() * porcentaje/100);
     }

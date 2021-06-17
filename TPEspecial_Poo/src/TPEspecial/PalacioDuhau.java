@@ -2,8 +2,6 @@ package TPEspecial;
 
 import TPEspecial.filtros.*;
 
-import java.util.ArrayList;
-
 public class PalacioDuhau {
     public static void main(String[] args) {
 
@@ -56,8 +54,6 @@ public class PalacioDuhau {
         primero.agregarAPedido(lasagna);
         primero.agregarAPedido(alfajor);
 
-
-        System.out.println(primero.toString());
 
     }
 }

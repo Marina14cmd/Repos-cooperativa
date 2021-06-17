@@ -52,9 +52,7 @@ public class Cocina {
     public void eliminarEstacion (EstacionTrabajo estacion) {
         estaciones.remove(estacion);
     }
-   /* public void agregarCriterioDeCobro (Filtro filtro) {
-        criterioDeCobro.add(filtro);
-    }*/
+
 
     public double precioPedido (Filtro filtro,Pedido pedido) {
         double retorno = 0;

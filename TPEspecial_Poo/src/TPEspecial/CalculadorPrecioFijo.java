@@ -14,6 +14,7 @@ public class CalculadorPrecioFijo extends Calculador{
         this.filtro = filtro;
     }
 
+    @Override
     public double calcularMonto(Comida comida) {
         double retorno = 0;
         if(filtro.cumple(comida))
