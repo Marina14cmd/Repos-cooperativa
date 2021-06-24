@@ -16,7 +16,6 @@ public class Secretaria {
         this.usuario = usuario;
         this.contrasenia = contrasenia;
     }
-    
 
     public String getNombre() { return nombre; }
 
