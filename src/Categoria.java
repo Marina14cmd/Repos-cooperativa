@@ -1,6 +1,5 @@
 
 public class Categoria {
 	
-	private 
 
 }
